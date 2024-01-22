@@ -1,0 +1,43 @@
+{
+    "Navbar" :{
+        "Home":"Home",
+        "About":"About",
+        "Contact":"Contact Us",
+        "Know":"Explore AI"
+    },
+    "Home" :{
+        "Welcome":"Welcome to Nyaay Sahaayak",
+        "Legal":"Your Virtual Legal Assistant",
+        "GS":"Get Started"
+    },
+    "About": {
+        "Why": "Why Nyaay Sahaayak?",
+        "Why2": "Why was it developed?",
+        "LearnMore": "Learn More"
+      },
+    "How": {
+        "How": "How?",
+        "How2": "How it works?",
+        "Lang":"Select Language",
+        "Lang2":"Select a Language",
+        "Dom":"Select Legal Domain",
+        "Dom2":"Select Your Legal Domain",
+        "Sol":"Get Your Solution",
+        "Sol2":"Get Solution from either our database or AI Chatbot"
+      },
+      "Useful":{
+        "How": "Useful Info",
+        "How2": "Some Useful Things to know",
+        "Lang":"File a Complaint",
+        "Lang2":"Know-Your-Rights",
+        "Dom":"Access Legal Docs",
+        "Dom2":"Know-Your-Rights",
+        "Sol":"Know Your Rights",
+        "Sol2":"Know-Your-Rights"
+      },
+      "GetStarted":{
+        "Greet":"Greetings!"
+      },
+      "WebpageLanguage": "The Webpage is in English",
+      "DefaultWebpageLanguage": "The Webpage will be in English"
+}

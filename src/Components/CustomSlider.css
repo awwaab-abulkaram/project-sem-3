@@ -1,0 +1,49 @@
+/* CustomSlider.css */
+
+.custom-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.8s linear;
+}
+
+.slide {
+    flex: 0 0 33.33%; /* Set the width to 33.33% to display 3 slides at a time */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    transition: opacity 0.8s ease-in;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.image-container {
+    margin: auto;
+    max-width: 300px;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000000;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    width: auto;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
