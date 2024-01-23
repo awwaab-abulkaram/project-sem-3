@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import About from './About';
 import Work from './Work';
-import Useful from './Useful';
+import CustomSlider from './CustomSlider';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <Work/>
         <About ref={aboutRef}/>
-        <Useful/>
+        <CustomSlider/>
         <Footer/>    
 </div>
   )

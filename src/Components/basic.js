@@ -6,4 +6,4 @@ const basic = () => {
   )
 }
 
-export default basic;
+export default basic

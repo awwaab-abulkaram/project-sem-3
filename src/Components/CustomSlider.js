@@ -1,7 +1,6 @@
 // CustomSlider.js
 import React, { useState } from 'react';
 import './CustomSlider.css'; // Import your custom CSS file
-import Navbar2 from './Navbar2';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import complaint from '../Assets/complaint.png';
@@ -76,7 +75,6 @@ const CustomSlider = () => {
 
     return (
         <div>
-            <Navbar2 />
             <div className="custom-slider">
                 <div className='useful-section-top'>
                     <p className='primary-heading'>{t('Useful.How')}</p>
