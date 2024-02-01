@@ -19,19 +19,19 @@ const CustomSlider = () => {
             title : t('Useful.Lang'),
             text : t('Useful.Lang2'),
             image: complaint,
-            link: '/'
+            link: '/file-complaint'
         },
         {
             image: docs ,
             title : t('Useful.Dom'),
             text : t('Useful.Lang2'),
-            link: '/'
+            link: '/legal-docs'
         },
         {
             image: KYR,
             title : t('Useful.Sol'),
             text : t('Useful.Lang2'),
-            link: '/'
+            link: '/know-rights'
         },
         {
             title: 'Card 4',

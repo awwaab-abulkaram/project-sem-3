@@ -9,6 +9,16 @@ import GetStarted from './Components/GetStarted.js';
 import Work from './Components/Work.js';
 import Contact from './Components/Contact.js';
 import BotWeb from './Components/BotWeb.js';
+import FileComplaint from './Components/FileComplaint.js';
+import LegalDocs from './Components/LegalDocs.js';
+import KnowRights from './Components/KnowRights.js';
+import Agri from './Components/Agri.js';
+import Womens from './Components/womens.js';
+import Land from './Components/land.js';
+import Edu from './Components/edu.js';
+import Govt from './Components/govt.js';
+import Employ from './Components/employ.js';
+
 
 const App = () => {
   return (
@@ -21,6 +31,15 @@ const App = () => {
         <Route path="/GetStarted" element={<GetStarted />} />
         <Route path="/Useful" element={<Useful />} />
         <Route path="/WebBot" element={<BotWeb />} />
+        <Route path="/file-complaint" element={ <FileComplaint />} />
+        <Route path="/legal-docs" element={<LegalDocs />} />
+        <Route path="/know-rights" element={<KnowRights />} />
+        <Route path="/agriculture" element={<Agri />} />
+        <Route path="/womensrights" element={<Womens />} />
+        <Route path="/land&property" element={<Land />} />
+        <Route path="/educational" element={<Edu />} />
+        <Route path="/employment&labor" element={<Employ />} />
+        <Route path="/govt.schemes" element={<Govt />} />
     </Routes>
     </Router>
   );
