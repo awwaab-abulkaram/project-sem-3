@@ -24,7 +24,7 @@
   }
   
   body {
-    background-color: #207ace;
+    background-color: #d9d9d9;
   }
   
   nav {
@@ -32,15 +32,16 @@
     align-items: center;
     justify-content: space-between;
     min-height: 90px;
-    background-color: #ffffff;
+    background-color: #2A3236;
   }
+
   .navbar-menu-container {
     display: none;
   }
   .navbar-links-container a {
     margin-right: 3rem;
     text-decoration: none;
-    color: #D9D9D9;
+    color: #d9d9d9;
     font-size: 1.1rem;
     font-weight: 600;
   }
@@ -69,6 +70,54 @@
     color: #D9D9D9;
     margin-right: 1rem;
   }
+  .searchBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+    margin: 2rem;
+    padding: auto;
+  }
+  
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #193f57 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  /*hover effect*/
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  /*button pressing effect*/
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+    width: 250rem;
+  }
+  
+  
   .navbar-cart-icon {
     font-size: 1.15rem;
   }
@@ -114,7 +163,7 @@
 
   .primary-navbar {
     font-size: clamp(2rem, 5vw, 4rem);
-    color: #f1e4e4;
+    color: #5B7553;
     text-align: center;
     font-weight:400;
     max-width: 100%; /* Ensure the heading takes the full width */
@@ -145,6 +194,13 @@
     margin: 1.5rem 0rem;
     text-align: center;
   }
+  .getstarted-text {
+    font-size: clamp(1.5rem, 3vw, 1.5rem);
+    max-width: 500px;
+    color: #001524;
+    margin: auto;
+    text-align: center;
+  }
   .animateHeader {
     animation: intro;
     animation-duration: 3s;
@@ -169,19 +225,43 @@
     transition: 0.3s;
 
   }
+  .bot-button {
+    padding: 1rem 2.5rem;
+    background-color: #04253d;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: 0.3s;
+    width: 75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+  }
+  .bot-button:hover {
+    background-color: #193f57;
+    transform: scale(1.1);
+  }
+  .link-in{
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+  }
 
   .link-in-buttons{
     transition: 0.3s;
-    color: whitesmoke;
+    color: white;
   }
 
   .link-in-buttons:hover {
     color: #000000;
-  }
-  
-  .secondary-button svg {
-    margin-left: 0.75rem;
-    font-size: 1.5rem;
   }
   .secondary-button:hover {
     background-color: #ffffff;

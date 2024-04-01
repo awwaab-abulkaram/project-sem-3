@@ -9,6 +9,8 @@ import property from '../Assets/property.png';
 import wr from '../Assets/wr.png';
 import edu from '../Assets/edu.png';
 import govt from '../Assets/govt.png';
+import Searchbutton from './searchbutton';
+import Footer from './Footer';
 
 const GetStarted = () => {
   const { t } = useTranslation();
@@ -42,16 +44,33 @@ const GetStarted = () => {
       image : govt ,
       title : t('Legal-Domain.6'),
       link : '/govt.schemes'
-    } 
+    },
+    {
+      image : govt ,
+      title : t('Legal-Domain.6'),
+      link : '/govt.schemes'
+    },  
+    {
+      image : govt ,
+      title : t('Legal-Domain.6'),
+      link : '/govt.schemes'
+    },
+    {
+      image : govt ,
+      title : t('Legal-Domain.6'),
+      link : '/govt.schemes'
+    },
 ]
   return (
     <div>
       <Navbar3 />
       <h1 className='primary-heading'>{t('GetStarted.Greet')}</h1>
+      <h3 className='getstarted-text'>Select a domain to continue!</h3>
+      <Searchbutton/>
       <div className='container-box'>
     {
         // Split workInfoData into chunks of 3
-        Array.from({ length: 2 }, (v, rowIndex) => (
+        Array.from({ length: 3 }, (v, rowIndex) => (
             <div key={rowIndex} className='work-section-row'>
                 {
                     // Map each row's elements
@@ -68,10 +87,12 @@ const GetStarted = () => {
         ))
     }
 </div>
-
-
-        
-      
+  <button className='bot-button'>
+                        <Link to='/WebBot' className='link-in'>
+                          Can't find what you are looking for? Ask AI
+                        </Link>
+  </button>
+  <Footer/>
     </div>
   )
 }

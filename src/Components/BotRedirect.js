@@ -1,8 +1,8 @@
 import React,{useEffect,useState} from 'react'
 import Loader from './Loader';
-import GetStarted from './GetStarted';
+import BotWeb from './BotWeb';
 
-const Contact = () => {
+const BotRedirect = () => {
   const [isLoading, setIsLoading]= useState(true);
 
   useEffect(() => {
@@ -16,9 +16,10 @@ const Contact = () => {
 
   return (
     <div>
-        {isLoading ? <Loader /> : <GetStarted />}
+        {isLoading && <Loader />}
+        <BotWeb className={isLoading ? 'hidden' : ''} />
     </div>
   )
   }
 
-export default Contact
+export default BotRedirect

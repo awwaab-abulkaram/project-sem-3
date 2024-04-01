@@ -18,6 +18,7 @@ import Land from './Components/land.js';
 import Edu from './Components/edu.js';
 import Govt from './Components/govt.js';
 import Employ from './Components/employ.js';
+import BotRedirect from './Components/BotRedirect.js';
 
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/GetStarted" element={<GetStarted />} />
         <Route path="/Useful" element={<Useful />} />
-        <Route path="/WebBot" element={<BotWeb />} />
+        <Route path="/WebBot" element={<BotRedirect />} />
         <Route path="/file-complaint" element={ <FileComplaint />} />
         <Route path="/legal-docs" element={<LegalDocs />} />
         <Route path="/know-rights" element={<KnowRights />} />
