@@ -4,11 +4,10 @@ import "./App.css";
 import Home from './Components/Home.js';
 import About from './Components/About.js';
 import Useful from './Components/Useful.js';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import GetStarted from './Components/GetStarted.js';
 import Work from './Components/Work.js';
 import Contact from './Components/Contact.js';
-import BotWeb from './Components/BotWeb.js';
 import FileComplaint from './Components/FileComplaint.js';
 import LegalDocs from './Components/LegalDocs.js';
 import KnowRights from './Components/KnowRights.js';
@@ -17,8 +16,10 @@ import Womens from './Components/womens.js';
 import Land from './Components/land.js';
 import Edu from './Components/edu.js';
 import Govt from './Components/govt.js';
-import Employ from './Components/employ.js';
 import BotRedirect from './Components/BotRedirect.js';
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 
 const App = () => {
@@ -39,7 +40,6 @@ const App = () => {
         <Route path="/womensrights" element={<Womens />} />
         <Route path="/land&property" element={<Land />} />
         <Route path="/educational" element={<Edu />} />
-        <Route path="/employment&labor" element={<Employ />} />
         <Route path="/govt.schemes" element={<Govt />} />
     </Routes>
     </Router>

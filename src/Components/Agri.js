@@ -1,16 +1,12 @@
 import React from 'react'
-import Navbar3 from './Navbar3'
-import { useTranslation } from 'react-i18next';
-import LegalSafeguardsData from '../locales/en.json';
-import LegalSafeguards from './LegalSafeguards';
+import PdfViewer from './PdfViewer';
+import Navbar2 from './Navbar3';
 
 const Agri = () => {
-  const { t } = useTranslation();
-
   return (
     <div>
-      <Navbar3/>
-      <LegalSafeguards data={LegalSafeguardsData} />
+      <Navbar2/>
+      <PdfViewer/>
     </div>
   )
 }
