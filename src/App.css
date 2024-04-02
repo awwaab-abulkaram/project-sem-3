@@ -38,9 +38,7 @@
 .react-pdf__Page {
   width: 300px;
   margin: auto;
-}
-
-  
+}  
   nav {
     display: flex;
     align-items: center;

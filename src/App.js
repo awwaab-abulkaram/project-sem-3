@@ -18,6 +18,7 @@ import Edu from './Components/edu.js';
 import Govt from './Components/govt.js';
 import BotRedirect from './Components/BotRedirect.js';
 import { pdfjs } from 'react-pdf';
+import Admin from './Components/Admin.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -27,6 +28,7 @@ const App = () => {
     <Router>
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin/>} />
         <Route path="/about" element={<About />} />
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />

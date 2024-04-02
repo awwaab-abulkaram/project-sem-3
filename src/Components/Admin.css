@@ -1,0 +1,80 @@
+.admin-box {
+    margin-bottom: 20px;
+    margin: auto; /* Center horizontally */
+    max-width: 600px; /* Increase maximum width */
+    padding: 20px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 10px; /* Increase border radius */
+}
+
+.admin-form {
+    margin-bottom: 10px;
+    padding: 10px; /* Increase padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make input fields full width */
+    font-size: 16px; /* Increase font size */
+}
+
+.secondary-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px; /* Increase padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    text-align: center; /* Center text */
+    font-size: 16px; /* Increase font size */
+}
+
+.secondary-button:hover {
+    background-color: #0056b3;
+}
+
+.uploaded {
+    margin-top: 20px;
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to next row */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+    width: 100%;
+}
+
+
+.output-div {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow items to wrap to next row */
+    gap: 20px; /* Increase gap between items */
+    margin-top: 20px;
+    justify-content: center;
+    align-self: center;
+}
+
+.inner-div {
+    flex: 0 0 calc(33.33% - 40px); /* Adjust width to fit 3 items per row */
+    padding: 20px; /* Increase padding */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px; /* Add margin between items */
+}
+
+.inner-div h6 {
+    margin: 0;
+    font-size: 18px; /* Increase font size */
+}
+
+.buttonss {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Increase padding */
+    cursor: pointer;
+    font-size: 16px; /* Increase font size */
+}
+
+.buttonss:hover {
+    background-color: #0056b3;
+}
