@@ -36,3 +36,35 @@
     background-color: #5B7553;
 
   }
+
+  .search-button {
+    padding: 1rem 2.5rem;
+    background-color: #7681B3;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: 0.3s;
+    width: 105rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+  }
+  .search-button:hover {
+    background-color: #636fa3;
+    transform: scale(1.1);
+  }
+  .icon-wrapper{
+    display: inline-flex;
+    align-content: center;
+    margin-left: 5rem;
+  }
+ 
+  

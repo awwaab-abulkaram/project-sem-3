@@ -5,7 +5,7 @@ import Snackbar from '@mui/material/Snackbar';
 import './Admin.css';
 import PdfViewer from './PdfViewer';
 
-const Admin = () => {
+const Admin2 = () => {
     const [title, setTitle] = useState('');
     const [file, setFile] = useState('');
     const [allPdf, setAllPdf] = useState([]);
@@ -77,4 +77,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default Admin2;

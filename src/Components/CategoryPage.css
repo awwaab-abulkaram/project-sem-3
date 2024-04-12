@@ -1,0 +1,31 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.elongated-card {
+  width: 90%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin-bottom: 20px;
+  border: 1px solid #575757;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Align items horizontally with space between them */
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.elongated-card:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.card-details {
+  flex: 1; /* Take remaining space */
+}
+
+.btn-view-pdf {
+  margin-left: 20px;
+}

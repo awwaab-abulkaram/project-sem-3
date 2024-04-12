@@ -3,12 +3,16 @@ import Navbar from './Navbar'
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import About from './About';
+import Connect from './Connect';
 import Work from './Work';
 import CustomSlider from './CustomSlider';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import PopupComponent from './Popup';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+
 
 
 
@@ -16,6 +20,7 @@ import PopupComponent from './Popup';
 const Home = () => {
     const { t,i18n } = useTranslation();
     const aboutRef = useRef(null);//autoscroll
+    const [openAlert, setOpenAlert] = useState(false);
 
     const scrollToAbout = () => {
         if (aboutRef.current) {
@@ -27,8 +32,13 @@ const Home = () => {
     const [animateHeader, setAnimateHeader] = useState(false);
     const handleLanguageChange = (language) => {
         i18n.changeLanguage(language);
-        setAnimateHeader(true);      };
-    
+        setAnimateHeader(true); 
+        setOpenAlert(true);
+    };
+    const handleCloseAlert = () => {
+      setOpenAlert(false);
+  };
+
   return (
     <div className='home-container'>
         <Navbar scrollToAbout={scrollToAbout} /> 
@@ -54,7 +64,13 @@ const Home = () => {
         <Work/>
         <About ref={aboutRef}/>
         <CustomSlider/>
-        <Footer/>    
+        <Connect/>
+        <Footer/>
+        <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleCloseAlert}>
+                <Alert onClose={handleCloseAlert} severity="success">
+                    Language Changed!
+                </Alert>
+            </Snackbar>    
 </div>
   )
 }

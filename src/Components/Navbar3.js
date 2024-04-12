@@ -12,22 +12,33 @@ import ListItemText from "@mui/material/ListItemText";
 import TranslateIcon from '@mui/icons-material/Translate';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import PopupComponent from './Popup';
+import Tooltip from '@mui/material/Tooltip';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+
+
+
 const Navbar2 = ({ scrollToAbout }) => {
+    const [showPopup, setShowPopup] = useState(false);
+    const [openAlert, setOpenAlert] = useState(false);
+
+    const handleCloseAlert = () => {
+        setOpenAlert(false);
+    };
+    const togglePopup = () => {
+      setShowPopup(!showPopup);
+    };
+    const handleLanguageChange = (language) => {
+        i18n.changeLanguage(language);
+        setOpenAlert(true);
+    };
+
     const [openMenu,setOpenMenu]= useState(false)
     
     const { t, i18n } = useTranslation();
-    const [currentLanguage, setCurrentLanguage] = useState('en');
     const navigate = useNavigate(); 
 
-  const toggleLanguage = () => {
-    const languages = ['en', 'hi', 'te', 'bn','gu','ma', 'ta','kn','as']; // Add more languages as needed
-    const currentIndex = languages.indexOf(currentLanguage);
-    const nextIndex = (currentIndex + 1) % languages.length;
-    const nextLanguage = languages[nextIndex];
-
-    i18n.changeLanguage(nextLanguage);
-    setCurrentLanguage(nextLanguage);
-  };
     const menuOptions = [
         {
             text:"Home",
@@ -51,12 +62,15 @@ const Navbar2 = ({ scrollToAbout }) => {
     return (
         <nav>
             <div className='nav-logo-container'>
+                <Tooltip title ="Go back">
                 <button className='back-button' onClick={() => navigate(-1)}>
                     <HiOutlineArrowLeft />
                 </button>
+                </Tooltip>
             </div><h1 className='primary-navbar'>{t('Title')}</h1>
             <div className='navbar-links-container'>
-            <button className='trans-button'onClick={toggleLanguage} ><TranslateIcon /></button>
+            <Tooltip title="Change Language"><button className='trans-button'onClick={togglePopup} ><TranslateIcon /></button></Tooltip>
+            {showPopup && <PopupComponent onClose={handleLanguageChange} />}
         </div>
         <div className='navbar-menu-container'>
             <HiOutlineBars3 onClick={() => setOpenMenu(true)}/>
@@ -77,6 +91,11 @@ const Navbar2 = ({ scrollToAbout }) => {
                 </List>
             </Box>
         </Drawer>
+        <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleCloseAlert}>
+                <Alert onClose={handleCloseAlert} severity="success">
+                    Language Changed!
+                </Alert>
+        </Snackbar> 
         </nav>
     );
 };

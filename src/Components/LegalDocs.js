@@ -1,8 +1,13 @@
 import React from 'react'
+import CardComponent from './CardComponent'
+import DropdownComponent from './DropDownComponent'
 
 const LegalDocs = () => {
   return (
-    <div>LegalDocs</div>
+    <div>
+      <DropdownComponent/>
+      <CardComponent/>
+    </div>
   )
 }
 

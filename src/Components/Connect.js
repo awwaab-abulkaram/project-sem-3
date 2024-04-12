@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 
-const About = React.forwardRef((props, ref) => {
+const Connect = React.forwardRef((props, ref) => {
   const { t } = useTranslation();
   return (
     <div ref={ref} className='about-section-container'>
@@ -12,7 +12,7 @@ const About = React.forwardRef((props, ref) => {
             <p className='primary-heading'>{t('About.Why')}</p>
             <p className='primary-text'>{t('About.Why2')}</p>
             <div className='about-button-container'>
-                <button className='secondary-button'><Link to='/' className='link-in-buttons'>{t('About.LearnMore')}</Link></button>
+                <button className='secondary-button'><Link to='/connect-to-lawyer' className='link-in-buttons'>{t('About.LearnMore')}</Link></button>
             </div>
         </div>
         </div> 
@@ -20,4 +20,4 @@ const About = React.forwardRef((props, ref) => {
   )
 });
 
-export default About
+export default Connect

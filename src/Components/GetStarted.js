@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar3 from './Navbar3';
 import './GetStarted.css';
@@ -9,92 +9,89 @@ import property from '../Assets/property.png';
 import wr from '../Assets/wr.png';
 import edu from '../Assets/edu.png';
 import govt from '../Assets/govt.png';
-import Searchbutton from './searchbutton';
 import Footer from './Footer';
+import health from '../Assets/health2.png'
+import finance from '../Assets/finance2.png'
 
 const GetStarted = () => {
   const { t } = useTranslation();
   const workInfoData = [
     {
-        image:  agri,
-        title : t('Legal-Domain.1'),
-        link : '/agriculture'
+      image: agri,
+      title: t('Legal-Domain.1'),
+      link: '/domain/agriculture',
     },
     {
-        image: property,
-        title : t('Legal-Domain.2'),
-        link : '/land&property'    
+      image: property,
+      title: t('Legal-Domain.2'),
+      link: '/domain/land&property',
     },
     {
-        image : edu ,
-        title : t('Legal-Domain.3'),
-        link : '/educational'
+      image: edu,
+      title: t('Legal-Domain.3'),
+      link: '/domain/educational',
     },
     {
-      image : employ ,
-      title : t('Legal-Domain.4'),
-      link : '/employment&labor'
+      image: employ,
+      title: t('Legal-Domain.4'),
+      link: '/domain/employment&labor',
     },
     {
-      image : wr ,
-      title : t('Legal-Domain.5'),
-      link : '/womensrights'
+      image: wr,
+      title: t('Legal-Domain.5'),
+      link: '/domain/womensrights',
     },
     {
-      image : govt ,
-      title : t('Legal-Domain.6'),
-      link : '/govt.schemes'
+      image: govt,
+      title: t('Legal-Domain.6'),
+      link: '/domain/govt-schemes',
     },
     {
-      image : govt ,
-      title : t('Legal-Domain.6'),
-      link : '/govt.schemes'
-    },  
-    {
-      image : govt ,
-      title : t('Legal-Domain.6'),
-      link : '/govt.schemes'
+      image: health,
+      title: 'Healthcare',
+      link: '/domain/healthcare',
     },
     {
-      image : govt ,
-      title : t('Legal-Domain.6'),
-      link : '/govt.schemes'
+      image: finance,
+      title: 'Rural Financing',
+      link: '/domain/rural-finance',
     },
-]
+  ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Navbar3 />
       <h1 className='primary-heading'>{t('GetStarted.Greet')}</h1>
       <h3 className='getstarted-text'>Select a domain to continue!</h3>
-      <Searchbutton/>
+      <button className='search-button'>
+        <Link to='/search' className='link-in'>
+          <span className='button-text'>Search for a Legal Domain Here</span>
+        </Link>
+      </button>
       <div className='container-box'>
-    {
-        // Split workInfoData into chunks of 3
-        Array.from({ length: 3 }, (v, rowIndex) => (
-            <div key={rowIndex} className='work-section-row'>
-                {
-                    // Map each row's elements
-                    workInfoData.slice(rowIndex * 3, rowIndex * 3 + 3).map((data, colIndex) => (
-                        <Link to={data.link} className='link-in-buttons'><div key={colIndex} className='box-info'>
-                            <div className='img-container'>
-                                <img src={data.image} alt='' />
-                            </div>
-                            <h2>{data.title}</h2>
-                        </div></Link>
-                    ))
-                }
-            </div>
-        ))
-    }
-</div>
-  <button className='bot-button'>
-                        <Link to='/WebBot' className='link-in'>
-                          Can't find what you are looking for? Ask AI
-                        </Link>
-  </button>
-  <Footer/>
+        {workInfoData.map((data, index) => (
+          <div className='box-info' key={index}>
+            <Link to= {data.link} className='link-in-buttons'>
+              <div className='img-container'>
+                <img src={data.image} alt='' />
+              </div>
+              <h2>{data.title}</h2>
+            </Link>
+          </div>
+        ))}
+      </div>
+      <button className='bot-button'>
+        <Link to='/WebBot' className='link-in'>
+          Can't find what you are looking for? Ask AI
+        </Link>
+      </button>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default GetStarted
+export default GetStarted;

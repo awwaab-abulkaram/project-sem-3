@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import axios from 'axios';
+import Navbar2 from './Navbar3'
+import Footer from './Footer'
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+
 import './FeedbackForm.css'; // Import the CSS file
 
 const Contact = () => {
+  const [openAlert, setOpenAlert] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
@@ -26,16 +32,25 @@ const Contact = () => {
         mobile: '',
         feedback: ''
       });
-      alert('Feedback submitted successfully!');
+      setOpenAlert(true)
     } catch (error) {
       console.error('Error submitting feedback:', error);
       alert('Error submitting feedback. Please try again later.');
     }
   };
 
+  const handleCloseAlert = () => {
+    setOpenAlert(false);
+};
+
   return (
+    <div>
+      <Navbar2 />
+      <div className='contact-container'>
+      <div className='image-contact'>
+      <h1 style={{textAlign:"center"}}>Reach out to us!</h1>
     <div className="feedback-form-container">
-      <h2>Submit Your Feedback</h2>
+      <h2>Get In Touch With Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -60,7 +75,7 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="feedback">Feedback:</label>
+          <label htmlFor="feedback">Message:</label>
           <textarea
             id="feedback"
             name="feedback"
@@ -69,8 +84,13 @@ const Contact = () => {
             required
           />
         </div>
-        <button type="submit">Submit Feedback</button>
+        <button type="submit" >Submit</button>
       </form>
+    </div>
+    </div>
+    </div>
+    <h1 className='primary-heading'>Meet the team :</h1>
+    <h2 className='primary-text'>Mentored by Dr. R Madhavi,</h2>
     </div>
   );
 };

@@ -11,14 +11,14 @@ import Contact from './Components/Contact.js';
 import FileComplaint from './Components/FileComplaint.js';
 import LegalDocs from './Components/LegalDocs.js';
 import KnowRights from './Components/KnowRights.js';
-import Agri from './Components/Agri.js';
-import Womens from './Components/womens.js';
-import Land from './Components/land.js';
-import Edu from './Components/edu.js';
-import Govt from './Components/govt.js';
 import BotRedirect from './Components/BotRedirect.js';
 import { pdfjs } from 'react-pdf';
 import Admin from './Components/Admin.js';
+import Admin2 from './Components/Admin2.js';
+import CategoryPage from './Components/CategoryPage.js';
+import PdfViewer2 from './Components/pdfViewer2.js';
+import Search from './Components/Search.js';
+import Lawyer from './Components/Lawyer.js';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -29,7 +29,9 @@ const App = () => {
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin/>} />
+        <Route path="/admin2" element={<Admin2/>} />
         <Route path="/about" element={<About />} />
+        <Route path="/connect-to-lawyer" element={<Lawyer />} />
         <Route path="/Work" element={<Work />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/GetStarted" element={<GetStarted />} />
@@ -38,11 +40,9 @@ const App = () => {
         <Route path="/file-complaint" element={ <FileComplaint />} />
         <Route path="/legal-docs" element={<LegalDocs />} />
         <Route path="/know-rights" element={<KnowRights />} />
-        <Route path="/agriculture" element={<Agri />} />
-        <Route path="/womensrights" element={<Womens />} />
-        <Route path="/land&property" element={<Land />} />
-        <Route path="/educational" element={<Edu />} />
-        <Route path="/govt.schemes" element={<Govt />} />
+        <Route path="/domain/:category" element={<CategoryPage />} />
+        <Route path="/pdfviewer/:pdfUrl" element={<PdfViewer2/>} />
+        <Route path="/search" element={<Search />} />
     </Routes>
     </Router>
   );

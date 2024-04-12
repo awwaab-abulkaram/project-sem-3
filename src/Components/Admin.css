@@ -16,7 +16,7 @@
     font-size: 16px; /* Increase font size */
 }
 
-.secondary-button {
+.secondarie-button {
     background-color: #007bff;
     color: #fff;
     padding: 12px 24px; /* Increase padding */
@@ -29,7 +29,7 @@
     font-size: 16px; /* Increase font size */
 }
 
-.secondary-button:hover {
+.secondarie-button:hover {
     background-color: #0056b3;
 }
 

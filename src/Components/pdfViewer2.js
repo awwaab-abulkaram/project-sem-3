@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import Button from '@mui/material/Button';
 import ZoomInIcon from '@mui/icons-material/ZoomIn';
@@ -8,26 +8,34 @@ import './PdfViewer.css'; // Import CSS file
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-function PdfViewer({ pdf }) {
-  const [numPages, setNumPages] = useState();
+function PdfViewer2({ language, cardName, pdfUrl }) {
+  const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.3); // State for zoom scale
   const [textLayers, setTextLayers] = useState([]); // State to store text layers of each page
   const [isReading, setIsReading] = useState(false); // State for reading status
 
   useEffect(() => {
+    console.log('pdfUrl:', pdfUrl); // Log pdfUrl prop
     const fetchTextLayers = async () => {
       const layers = [];
-      const pdfDoc = await pdfjs.getDocument(pdf).promise;
-      for (let i = 1; i <= pdfDoc.numPages; i++) {
-        const page = await pdfDoc.getPage(i);
-        const textContent = await page.getTextContent();
-        layers.push(textContent.items.map(item => item.str));
+      try {
+        if (!pdfUrl) return;
+        const pdfDoc = await pdfjs.getDocument({ url: pdfUrl }).promise;
+        for (let i = 1; i <= pdfDoc.numPages; i++) {
+          const page = await pdfDoc.getPage(i);
+          const textContent = await page.getTextContent();
+          layers.push(textContent.items.map(item => item.str));
+        }
+        setTextLayers(layers);
+        setNumPages(pdfDoc.numPages);
+      } catch (error) {
+        console.error('Error loading PDF document:', error);
       }
-      setTextLayers(layers);
     };
+    
     fetchTextLayers();
-  }, [pdf]);
+  }, [pdfUrl]);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -80,11 +88,13 @@ function PdfViewer({ pdf }) {
           </Button>
         )}
       </div>
-      <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-        {Array.apply(null, Array(numPages)).map((x, i) => i + 1).map((page => <Page key={page} pageNumber={page} scale={scale} renderTextLayer={false} renderAnnotationLayer={false} />))}
+      <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
+        {Array.from(new Array(numPages), (el, index) => (
+          <Page key={`page_${index + 1}`} pageNumber={index + 1} scale={scale} />
+        ))}
       </Document>
     </div>
   );
 }
 
-export default PdfViewer;
+export default PdfViewer2;
