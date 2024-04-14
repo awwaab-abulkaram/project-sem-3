@@ -36,7 +36,9 @@
         "Sol2":"Know-Your-Rights"
       },
       "GetStarted":{
-        "Greet":"Greetings!"
+        "Greet":"Greetings!",
+        "Text":"Select a legal domain to continue!",
+        "Search":"Seach for a legal domain here"
       },
       "WebpageLanguage": "The Webpage is in English",
       "DefaultWebpageLanguage": "The Webpage will be in English",
@@ -47,12 +49,42 @@
         "3":"Educational Issues",
         "4":"Employment & Labour Rights",
         "5":"Women's Right",
-        "6":"Access to Government Schemes and Services"
+        "6":"Access to Government Schemes and Services",
+        "7":"Healthcare",
+        "8":"Rural Financing"
       },
       "cardNames": {
         "Name":"Name",
-        "awwaab": "Card 1 Name",
-        "shahed potato": "Smoll Potato"
+        "rape":"Rape",
+        "dowry":"Dowry",
+        "dowryd":"Dowry Death",
+        "sh":"Sexual Harassment",
+        "trafficking":"Trafficking",
+        "acid":"Acid Attack",
+        "child":"Child Marriage",
+        "husband":"Violence By Husband or Relatives",
+        "agri1":"Agricultural Markets: Challenges and Solutions for Farmers",
+        "agri2":"Fair Access and Pricing",
+        "agri3":"Contract Farming & Dispute Management",
+        "land1":"Land Acquisition, Rehabilitation, and Resettlement",
+        "emp1":"Factories",
+        "emp2":"Pension, Insurance and Employee benefits",
+        "land2":"Forest Rights",
+        "edu1":"Free & Compulsory Education",
+        "edu2":"National Educational Policy",
+        "edu3":"Sexual Offenses in Educational Institutes",
+        "posco":"Sexual Offenses in Educational Institutes",  
+        "govt2":"Aadhaar & Subsidy",
+        "govt1":"Right to Information",
+        "govt3":"Food Security Act",
+        "govt4":"Guranteed Employment",
+        "ruf1":"Pradhan Mantri Fasal Bima Yojana",
+        "ruf2":"Kisan Credit Card",
+        "ruf3":"Housing Finance Assistance",
+        "emp":"Minimum Wages",
+        "hlc3":"Mental Health",
+        "hlc2":"Drugs & Substance Abuse",
+        "hlc1":"Clinical Establishments"
       },
       "cardDomains": {
         "agriculture": "Agriculture",
@@ -74,7 +106,103 @@
         "govt-schemes": "Access Government Schemes & Services",
         "healthcare": "Healthcare",
         "rural-finance": "Rural Financing"
+      },
+      "Connect":{
+        "Heading":"Navigate Your Legal Questions with Ease",
+        "Text":"Legal Guidance, Just a Click Away",
+        "Button":"Consult Now"
+      },
+      "T-File": {
+        "Main": "How to File a Complaint in Rural India: A Step-by-Step Guide",
+        "1": "Understanding the Importance of Filing a Complaint",
+        "2": "Identifying the Issue",
+        "3": "Choosing the Right Authority",
+        "4": "Gathering Evidence",
+        "5": "Visiting the Relevant Office",
+        "6": "Filing the Complaint",
+        "7": "Obtaining Acknowledgment",
+        "8": "Follow-Up",
+        "9": "Seeking Legal Assistance (if necessary)",
+        "10": "Resolving the Issue",
+        "Con":"Conclusion:"
+      },
+      "C-File": {
+        "1": "In rural India, filing a complaint is crucial for addressing grievances and seeking justice. Whether it's regarding a dispute, a crime, or a violation of rights, filing a complaint is the first step towards finding a resolution.",
+        "2": "Before filing a complaint, it's essential to clearly identify the issue at hand. This could include instances of theft, harassment, land disputes, or any other violation of law or rights.",
+        "3": "Once the issue is identified, it's important to determine the appropriate authority to file the complaint with. This could be the local police station, the village council (Gram Panchayat), or other government offices depending on the nature of the complaint.",
+        "4": "Before approaching the authorities, gather any evidence or documentation related to the complaint. This could include witness statements, photographs, documents, or any other relevant proof to support your case.",
+        "5": "Visit the office of the chosen authority during their working hours. It's advisable to carry multiple copies of your complaint and supporting documents.",
+        "6": "Once at the office, approach the designated person in charge and explain your issue. Fill out the necessary forms or documents required for filing a complaint. Be clear and concise while providing details about the incident.",
+        "7": "After filing the complaint, make sure to obtain an acknowledgment receipt or a copy of the filed complaint. This serves as proof that the complaint has been registered with the authorities.",
+        "8": "Follow up with the concerned authority regularly to inquire about the progress of your complaint. Maintain records of all communication and interactions regarding the complaint.",
+        "9": "If the issue remains unresolved or if you encounter any obstacles in the process, consider seeking legal assistance. There are legal aid services available in rural areas that can provide guidance and support.",
+        "10": "With perseverance and patience, continue to pursue the complaint until a resolution is reached. Be cooperative with the authorities and provide any additional information or assistance they may require.",
+        "Con":"Filing a complaint in rural India can be a straightforward process when approached systematically. By understanding the importance of filing a complaint, identifying the issue, choosing the right authority, gathering evidence, and following through with the necessary steps, individuals can seek justice and resolution for their grievances."
+      },
+      "T-Legal": {
+        "Main": "Accessing Legal Documents in Rural India: A Step-by-Step Guide",
+        "1": "Understanding the Importance of Legal Documents",
+        "2": "Identifying the Required Documents",
+        "3": "Locating the Relevant Authority or Office",
+        "4": "Understanding the Application Process",
+        "5": "Visiting the Authority or Office",
+        "6": "Submitting the Application",
+        "7": "Obtaining Acknowledgment",
+        "8": "Following Up on the Application",
+        "9": "Seeking Assistance (if necessary)",
+        "10": "Receiving the Legal Documents",
+        "Con":"Conclusion:"
+      },
+      "C-Legal": {
+        "1": "In rural India, having access to legal documents is essential for various purposes, including property ownership, financial transactions, and legal proceedings. Legal documents serve as evidence of rights, agreements, and obligations, ensuring clarity and protection under the law.",
+        "2": "Before accessing legal documents, it's crucial to identify the specific documents needed for your particular situation. This could include land titles, identity proofs, income certificates, birth certificates, marriage certificates, or any other documents relevant to your legal needs.",
+        "3": "Once you've identified the required documents, the next step is to determine the appropriate authority or office from which to obtain them. This could be the local government office, revenue department, municipal corporation, or other government agencies responsible for issuing specific legal documents.",
+        "4": "Before visiting the authority or office, familiarize yourself with the application process for obtaining the desired legal documents. This may involve filling out application forms, providing supporting documents, paying fees, and adhering to any specific requirements or procedures outlined by the issuing authority.",
+        "5": "Visit the designated authority or office during their working hours to apply for the required legal documents. Ensure that you carry all necessary documents, identification proofs, and fees as specified in the application process.",
+        "6": "Upon reaching the authority or office, submit your application along with the required documents and fees to the designated personnel. Be prepared to provide any additional information or clarification if requested by the authorities.",
+        "7": "After submitting the application, make sure to obtain an acknowledgment receipt or a copy of the application form stamped with the date and reference number. This serves as proof of your application submission and may be required for future reference.",
+        "8": "Follow up with the concerned authority or office at regular intervals to inquire about the status of your application. Maintain records of all communication and interactions regarding your application to ensure timely processing.",
+        "9": "If you encounter any challenges or delays in obtaining the required legal documents, consider seeking assistance from local legal aid services or advocacy organizations. They can provide guidance, support, and advocacy to help resolve issues and expedite the process.",
+        "10": "Once your application is processed and approved, collect the legal documents from the issuing authority or office as per their instructions. Verify the accuracy of the documents and retain them safely for future reference and legal purposes.",
+        "Con":"Accessing legal documents in rural India is a critical step in safeguarding individual rights, facilitating transactions, and ensuring legal compliance. By understanding the process, identifying the required documents, and following through with the necessary steps, individuals can obtain the legal documents they need to address various legal matters and protect their interests effectively."
+      },
+      "T-Rights": {
+        "Main": " Know Your Rights: A Comprehensive Guide for Rural India",
+        "1": "Understanding the Importance of Knowing Your Rights",
+        "2": "Identifying Your Rights",
+        "3": "Legal Framework and Sources of Rights",
+        "4": "Knowing Rights in Different Domains",
+        "5": "Recognizing Violations and Remedies",
+        "6": "Access to Legal Aid and Support Services",
+        "7": "Community Awareness and Mobilization",
+        "8": "Advocacy and Participation",
+        "9": "Continuous Learning and Empowerment",
+        "Con":"Conclusion:"
+      },
+      "C-Rights": {
+        "1": "In rural India, having awareness of one's rights is fundamental for safeguarding individual dignity, ensuring access to justice, and promoting accountability. Knowing your rights empowers individuals to assert themselves, advocate for their interests, and navigate legal and social systems effectively.",
+        "2": "Before understanding your rights, it's essential to identify the various rights that individuals are entitled to under the law. These rights may include but are not limited to:",
+        "3": "Familiarize yourself with the legal framework and sources of rights in India, including the Constitution of India, statutory laws, judicial decisions, and international conventions and treaties ratified by India. Understanding the legal basis of your rights provides context and legitimacy to assert them effectively.",
+        "4": "Rights extend across various domains of life, including civil rights, political rights, social rights, economic rights, and cultural rights. Educate yourself about your rights in each domain, including rights related to land ownership, employment, healthcare, education, and social welfare benefits.",
+        "5": "Be vigilant in recognizing violations of your rights and understanding the available remedies and recourse mechanisms. This may involve lodging complaints, seeking legal assistance, engaging in advocacy, or accessing grievance redressal mechanisms at local, district, or state levels.",
+        "6": "In case of rights violations or legal challenges, avail yourself of legal aid and support services available in rural areas. Legal aid clinics, NGOs, and legal practitioners can provide guidance, representation, and advocacy to address rights violations and seek justice.",
+        "7": "Promote community awareness and mobilization efforts to educate fellow residents about their rights, build solidarity, and advocate for collective interests. Community-based organizations, self-help groups, and grassroots movements play a vital role in promoting rights consciousness and social justice.",
+        "8": "Participate actively in advocacy efforts and democratic processes to influence policy decisions, shape laws, and uphold rights protections. By engaging in advocacy campaigns, public hearings, and community dialogues, individuals can amplify their voices and bring about positive change.",
+        "9": "Rights awareness is an ongoing process that requires continuous learning, empowerment, and active engagement with legal and social systems. Stay informed about developments in rights law, policy reforms, and social justice movements to effectively protect and advance your rights.",
+        "Con":"Knowing your rights is not just a matter of legal knowledge; it is a tool for empowerment, social justice, and democratic citizenship. By understanding, asserting, and defending their rights, individuals in rural India can contribute to building a more equitable, inclusive, and rights-respecting society for all."
+      },
+      "List":{
+        "1":"Right to equality and non-discrimination",
+        "2":"Right to life and personal liberty",
+        "3":"Right to freedom of speech and expression",
+        "4":"Right to education and employment",
+        "5":"Right to a clean environment and sustainable livelihood",
+        "6":"Right to information and transparency in governance"
+      },
+      "Abstract":{
+        "Title":"About Us",
+        "Content":"In India, a significant portion of the population faces challenges accessing legal information and awareness, particularly individuals who are illiterate or belong to marginalized communities. To address this issue, there is a pressing need for a user-friendly and easily accessible platform for legal awareness. This project aims to develop a digital assistant tailored to provide legal information and guidance in a user-friendly manner. The digital assistant will be designed to converse in multiple languages and deliver information in a concise and easy-to-understand format. Accessible across various devices such as smartphones, tablets, and desktop computers, the platform will serve as a comprehensive resource for addressing common legal queries. By leveraging technology, this digital assistant seeks to bridge the gap in legal awareness and empower individuals across diverse communities in India."
       }
 
-      }
+}
       

@@ -1,41 +1,43 @@
 import React from "react";
-import { BsTwitter } from "react-icons/bs";
-import { SiLinkedin } from "react-icons/si";
-import { BsYoutube } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="footer-wrapper">
-      <div className="footer-section-one">
-        <div className="footer-icons">
-          <BsTwitter />
-          <SiLinkedin />
-          <BsYoutube />
-          <FaFacebookF />
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Team</li>
+            <li>Careers</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div className="footer-column">
+          <h3>Legal</h3>
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Disclaimer</li>
+          </ul>
+        </div>
+        <div className="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>PS-4, Keshav Memorial Engineering College</li>
+            <li>Peerzadiguda, Hyderabad</li>
+            <li>Phone: (123) 456-7890</li>
+            <li>Email: nyaay@sahaayak.com</li>
+          </ul>
         </div>
       </div>
-      <div className="footer-section-two">
-        <div className="footer-section-columns">
-          <span>Qualtiy</span>
-          <span>Help</span>
-          <span>Share</span>
-          <span>Carrers</span>
-          <span>Testimonials</span>
-          <span>Work</span>
-        </div>
-        <div className="footer-section-columns">
-          <span>244-5333-7783</span>
-          <span>hello@food.com</span>
-          <span>press@food.com</span>
-          <span>contact@food.com</span>
-        </div>
-        <div className="footer-section-columns">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
-        </div>
+      <div className="footer-disclaimer">
+        <p>
+          This website is for informational purposes only. It does not constitute legal advice or establish an attorney-client relationship.
+        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

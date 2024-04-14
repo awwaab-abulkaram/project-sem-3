@@ -62,15 +62,20 @@ const GetStarted = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const redirect = () => {
+    window.location.href = '/search';
+  };
+  const redirectBot = () => {
+    window.location.href = '/WebBot';
+  };
+
   return (
     <div>
       <Navbar3 />
       <h1 className='primary-heading'>{t('GetStarted.Greet')}</h1>
-      <h3 className='getstarted-text'>Select a domain to continue!</h3>
-      <button className='search-button'>
-        <Link to='/search' className='link-in'>
-          <span className='button-text'>Search for a Legal Domain Here</span>
-        </Link>
+      <h3 className='getstarted-text'>{t('GetStarted.Text')}</h3>
+      <button className='search-button' onClick={redirect}>
+            {t('GetStarted.Search')}
       </button>
       <div className='container-box'>
         {workInfoData.map((data, index) => (
@@ -84,10 +89,8 @@ const GetStarted = () => {
           </div>
         ))}
       </div>
-      <button className='bot-button'>
-        <Link to='/WebBot' className='link-in'>
-          Can't find what you are looking for? Ask AI
-        </Link>
+      <button className='bot-button' onClick={redirectBot}>
+           Can't find what you are looking for? Ask AI
       </button>
       <Footer />
     </div>

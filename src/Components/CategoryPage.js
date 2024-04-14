@@ -58,7 +58,7 @@ const CategoryPage = () => {
   return (
     <div>
       <Navbar2 />
-      <h1 className='primary-heading'>You have selected the domain:</h1>
+      <h1 className='secondary-heading'>You have selected the domain:</h1>
       <h1 className='primary-heading'>{t(`Domains.${category}`)}</h1>
       {loading && <div>Loading cards...</div>}
       {error && <div>Error: {error}</div>}

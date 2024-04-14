@@ -57,7 +57,7 @@ const Contact = () => {
     const filterClientsByTag = (client) => {
         return client.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     };
-
+    
     return (
         <div>
             <Navbar2/>

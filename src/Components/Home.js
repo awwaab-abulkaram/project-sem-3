@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from './Navbar'
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +7,6 @@ import Connect from './Connect';
 import Work from './Work';
 import CustomSlider from './CustomSlider';
 import Footer from './Footer';
-import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import PopupComponent from './Popup';
 import Alert from '@mui/material/Alert';
@@ -21,7 +20,10 @@ const Home = () => {
     const { t,i18n } = useTranslation();
     const aboutRef = useRef(null);//autoscroll
     const [openAlert, setOpenAlert] = useState(false);
-
+    
+    const redirect = () => {
+        window.location.href = '/GetStarted';
+      };
     const scrollToAbout = () => {
         if (aboutRef.current) {
           aboutRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -38,6 +40,11 @@ const Home = () => {
     const handleCloseAlert = () => {
       setOpenAlert(false);
   };
+  useEffect(() => {
+    console.log("Component mounted, scrolling to top");
+    window.scrollTo(0, 0);
+}, []);
+
 
   return (
     <div className='home-container'>
@@ -53,11 +60,8 @@ const Home = () => {
                 <p className='primary-text'>
                     {t('Home.Legal')}
                 </p>
-                
-                    <button className='secondary-button'>
-                        <Link to='/GetStarted' className='link-in-buttons'>
+                    <button className='secondary-button' onClick={redirect}>
                         {t('Home.GS')}
-                        </Link>
                     </button>
               </div>
         </div>

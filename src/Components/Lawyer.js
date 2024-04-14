@@ -51,6 +51,9 @@ const LawyersPage = () => {
     };
 
     fetchLawyers();
+
+    // Scroll to top when component is mounted/rendered
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [selectedState, selectedExpertise]);
 
   const generateAvatar = (name) => {
@@ -111,7 +114,7 @@ const LawyersPage = () => {
   </Select>
 </FormControl>
 
-  <Button sx={{minWidth:500,marginTop:'1rem'}} variant="contained" onClick={handleSubmit}>Submit</Button>
+  <Button sx={{minWidth:500,marginTop:'1rem'}} variant="contained" onClick={handleSubmit}>Filter</Button>
 </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', margin:'50px',flexDirection:'column',marginLeft:'110px',marginTop:'5rem' }}>
         {loading ? (
